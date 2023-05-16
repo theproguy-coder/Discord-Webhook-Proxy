@@ -403,7 +403,7 @@ app.delete("/api/webhooks/:id/:token/messages/:messageId", limiter, (req, res) =
 })
 
 mongoose.connect(process.env.MONGO_URI as string).then(() => {
-    app.listen(7053, () => {
+    app.listen($PORT, () => {
         console.log("🙌 Listening for Requests")
     })
 })
